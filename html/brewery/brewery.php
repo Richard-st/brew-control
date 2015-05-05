@@ -26,7 +26,7 @@
        	 				 			<h3 id="TIME" ></h3>
        	 							</td>
        	 							<td style="text-align:center">
-       	 				 				<h2>Nano Brewery</h2>
+       	 				 				<h2>Nano Brewery Migh finally be there</h2>
        	 				 			</td>
        	 				 			 
        	 							<td style="text-align:right">
