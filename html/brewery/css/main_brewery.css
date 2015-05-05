@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+div {
+	display: block;
+}
+#page {
+	position: relative;
+}
+
+body, p, div, textarea {
+	font-family: "Lucida Grande",arial,sans-serif;
+	font-size: 13px;
+}
+p.links {
+	margin: 0;
+	color: #CCC;
+
+}
+
+p.links a {
+	text-decoration: none;
+}
+
+
+p.links a:hover
+{
+	text-decoration: underline;
+}
+
+.logo
+{
+	height:70px;
+	border:0;
+}
+
+#containerHeader p.links a {
+	color: #025998;
+	font-size: 16px;
+	margin-left: 25px;
+}
+
+
+body.layout_corp {
+	background: #EAEEF2 url(/brewery2/image/bg_gradient.png) repeat-x scroll 0 0;
+	height:100%;
+}
+
+#containerHeader .content {
+	padding: 22px 0 20px 0;
+	position: relative;
+}
+
+div.content {
+	width: 950px;
+	margin: 0 auto;
+}
+
+.content > h1 {
+	background: transparent url(/brewery2/image/header_gradient.jpg) no-repeat scroll 0 0;
+	border: none;
+	padding: 21px 0 20px 0;
+	margin: 0;
+	color: white;
+	text-align: center;
+	text-shadow: 0 -1px 0 black;
+	font-family: "Lucida Grande",arial,sans-serif;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+#containerHeader p.links {
+	position: relative;
+	line-height: 20px;
+	float: right;	
+}
+
+#containerMain {
+
+}
+
+#containerHeader{
+	background: none;
+}	
+
+#main {
+	padding-bottom: 140px;
+}	
+
+
+.containerBody{
+	background-color: white;
+	padding: 25px 35px;
+	border-left: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	-moz-border-radius: 0 0 6px 6px;
+	-webkit-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	-moz-box-shadow: 0 1px 2px #ccc;
+	-webkit-box-shadow: 0 1px 2px #CCC;
+	box-shadow: 0 1px 2px #CCC;
+}
+
+#containerBodyControl{
+	height:430 px;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	height: 80px;
+	width: 100%;
+}
+
+
+#containerFooter{
+	border-top: 1px solid white;
+	color: #666;
+	padding: 12px 4px 0 4px;
+}
+

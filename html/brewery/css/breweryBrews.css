@@ -1,0 +1,36 @@
+.mash_line_chart{
+  float:left;
+  height:270;
+  width:350;  
+  border-left:1px;
+}
+
+.hlt_line_chart{
+  float:left;  
+  width:200;
+  height:130;  
+}
+
+.boil_line_chart{
+  float:left;  
+  width:200; 
+  height:130;     
+}
+
+.timeline_bar_chart{
+  float:left;  
+  width:150; 
+  height:50;     
+}
+
+.hopline_bar_chart{
+  float:left;  
+  width:150; 
+  height:50;     
+}
+
+.gravityline_bar_chart{
+  float:left;  
+  width:150; 
+  height:50;     
+}

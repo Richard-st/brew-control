@@ -1,0 +1,374 @@
+
+ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+margin: 0;
+padding: 0;
+} 
+
+
+body {
+margin: 0;
+padding: 0;
+background-color:#E5ECF9;
+}
+
+#container {
+width: 100%;
+margin: 0 0;
+background-color: #E5ECF9;
+}
+
+#output-Container{
+height:95%;
+width:100%;
+}
+ 
+.pane {
+position: relative;
+background-color: WHITE;
+border: 4px solid BLACK;
+padding: 4px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.pane-row {
+position: relative;
+margin: 1px 1px 5px 5px;
+width:97%;
+}
+
+.pane-header {
+position: relative;
+margin: 0;
+padding: 4px;
+padding-bottom: 8px;
+}
+
+.pane-header  {
+	
+color: BLACK;
+background-color:#CFE2F3;
+font-size: 14px;
+font-family: arial,sans-serif;
+font-weight: bold;
+
+height:5%;
+margin: 4px;
+padding: 4px;
+
+border: 2px solid BLACK;
+background-size:100% 100%;
+
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+#pane-ip{
+  width:100px;
+}
+
+.pane-content {
+background-color: white;
+
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+margin: 0;
+padding: 0;
+}
+
+.vessel {
+margin: 10px;
+
+width:30%;
+height:400px;
+background-color:#CFE2F3;
+
+border: 2px solid BLACK;
+background-size:100% 100%;
+background-repeat:no-repeat;
+-webkit-border-radius: 25px;
+-moz-border-radius: 25px;
+border-radius: 25px;
+
+}
+
+
+#hlt-vessel{
+float: left;
+
+}
+#mash-vessel{
+float: left;
+}
+#boiler-vessel{
+float: left;
+}
+
+#hlt-temp-guage{
+float: left;
+}
+
+.temp_guage{
+	padding-left:10px;
+}
+
+
+.t_vessel{
+width:90%;
+height:90%;
+margin: 1px 1px 10px 10px;
+}
+
+.t_vessel_inner{
+width:90%;
+height:90%;
+margin: 1px 1px 10px 10px;
+} 
+
+
+.tr_vessel_header{
+height:10%;
+
+}
+
+
+.div_vessel_header{
+margin-top:5px;
+height:15px;
+text-align:center;
+font-size: 15px;
+font-family: arial,sans-serif;
+font-weight: bold;
+}
+
+.div_vessel_box{
+margin-left: 15px;
+margin-right: 15px;
+margin-top: 5px;
+margin-bottom: 5px;
+
+
+
+text-align:center;
+font-size: 12px;
+font-family: arial,sans-serif;
+font-weight: bold;
+
+border: 1px solid BLACK;
+background-size:100% 100%;
+background-repeat:no-repeat;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+#div_vessel_status{
+height:25%;	
+}
+
+#div_vessel_control{
+height:20%;	
+}
+
+#div_vessel_graph{
+height:30%;	
+}
+
+#div_vessel_log{
+height:20%;	
+}
+
+
+
+/*---------------
+// vessel Control
+//---------------*/
+
+
+.tb_vessel_status{
+	width:95%;
+  border-collapse:collapse;	
+	margin-top:7px;	  
+	
+}
+
+.td_vessel_status_text{
+	font-size: 11px;	
+  font-weight: bold;	
+	text-align:left;
+	width:60px;	
+	border-top:2px solid;	
+	border-bottom:2px solid;
+	border-left:2px solid;	
+	border-right:2px solid;		
+	padding-left:3px;	
+}
+
+.td_vessel_status_status{
+	font-size: 11px;	
+  font-weight: bold;	
+	text-align:center;
+	width:45px;	
+	border-top:2px solid;	
+	border-bottom:2px solid;
+	border-right:2px solid;	
+	padding-left:3px;
+	
+}
+
+#tr_vessel_status{
+	border-spacing:10px;
+	height:22px;		
+
+}
+
+/*---------------
+// vessel Control
+//---------------*/
+
+.tb_vessel_control{
+	width:100%;
+  border-collapse:collapse;	
+	margin-top:5px;	  		
+}
+
+#tr_vessel_control{
+border-spacing:10px;		
+}
+
+#td_vessel_control_filler{
+	width:5%;
+}
+
+#td_vessel_control_button_lf{
+	font-size: 12px;	
+	text-align:center;
+	width:40px;	
+	border-top:2px solid;	
+	border-bottom:2px solid;
+	border-left:2px solid;	
+			
+}
+
+#td_vessel_control_button_rg{
+	font-size: 12px;	
+	text-align:center;
+	width:40px;	
+	border-top:2px solid;	
+	border-bottom:2px solid;
+	border-right:2px solid;						
+}
+
+#tr_vessel_control_row_filler{
+
+  font-size: 5px;	
+}
+
+
+#ip_vessel_control_button_true{
+	font-size: 10px;	
+	text-align:center;
+	width:30px;
+	color: green;
+  font-weight: bold;	
+}
+
+#ip_vessel_control_button_false{
+	font-size: 10px;	
+	text-align:center;
+	width:30px;
+	color: red;
+  font-weight: bold;	
+}
+
+#td_vessel_control_text{
+	font-size: 11px;	
+  font-weight: bold;	
+	text-align:center;
+	width:40px;	
+	border-top:2px solid;	
+	border-bottom:2px solid;
+		
+}
+
+#td_vessel_control_box_text{
+	font-size: 11px;	
+  font-weight: bold;	
+	text-align:right;
+	padding-right:2px;
+	width:40px;	
+	border-top:2px solid;	
+	border-bottom:2px solid;	
+	border-left:2px solid;		
+}
+
+#td_vessel_control_input_box{
+	font-size: 12px;	
+	text-align:left;
+	width:40px;	
+	border-top:2px solid;	
+	border-bottom:2px solid;	
+	border-right:2px solid;		
+}
+
+
+
+.ip_vessel{
+	width:100%;
+	font-size: 11px;	
+  font-weight: bold;	
+  padding-left:5px;
+}	
+	
+
+
+
+
+
+.tr_vessel_controls{
+height:10%;
+}
+
+.temp_chart_div{
+	margin:5px 5px 5px 5px;
+	height:115px;
+}
+
+#div_vessel_log{
+
+			 border:2px solid;
+			 border-color:black;	
+		 	 height:50px;		
+	 	 
+}
+.div_vessel_log_container{
+	
+ 			 overflow-y:scroll;	
+		 	 height:90%;		
+			 margin:3px 3px 1px 3px;		 	  			 
+}
+
+.tb-log {background-color:none;
+	     	height:30px;
+   			width:100%;   	 
+   			border-collapse:collapse;
+   			
+}   
+
+.tr-log-row {background-color:white;
+	 			font-size:10px;
+	 			font-weight:bold;
+}   
+		 
+.td-log-cell {
+				border:1px dotted;
+				 border-color:black;   	 
+				 padding-left:5px;   
+}
+
+#td_log_cell_time{
+	width:30px;
+}
+   							

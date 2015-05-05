@@ -1,0 +1,42 @@
+
+.brewSheetBold {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.brewSheetNormal {
+  line-height: 19px;
+  color: #757575;
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.brewDivider {
+  color: #757575;
+  width: 100%;
+  align: right;
+  margin-top: 5px;
+  margin-bottom: 5px;  
+}
+
+.brewLinks {
+  margin: 0;
+  line-height: 19px;
+  color: #757575;
+  margin: 5px 0;
+  font-size: 13px;
+  text-decoration: none;
+
+}
+
+.brewLinks a{
+	text-decoration: none;
+}
+
+
+.brewLinks a:hover
+{
+	text-decoration: underline;
+}

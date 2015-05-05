@@ -1,0 +1,49 @@
+
+/*
+#676c7f
+#ca8799
+#e1d5bf
+#efefef
+#ffffff
+*/
+body{
+  background-color:#ffffff;
+}
+
+#header{
+  background-color:#ca8799;
+}
+
+#page-body{
+  background-color:#efefef;
+}
+
+#footer{
+  background-color:#ca8799;
+}
+
+.vessel-container{
+  background-color:#e1d5bf;
+  color:#676c7f;
+}
+
+.vessel-status{
+  background-color:#e1d5bf;
+}
+
+.vessel-graph{
+  background-color:#e1d5bf;
+}
+
+.vessel-title{
+  background-color:#e1d5bf;
+}
+
+.vessel-temp{
+  background-color:#e1d5bf;
+}
+
+.vessel-control{
+  background-color:#e1d5bf;
+}
+

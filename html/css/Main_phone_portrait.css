@@ -1,0 +1,25 @@
+#page-body{
+
+  height:auto;
+  padding: 0;
+  
+}
+
+.vessel-container {
+  color : yellow;
+ margin:0;
+ float : left;
+ width : 100%;
+ max-width:360px;
+ min-width:360px; 
+  }
+
+#header{
+  padding-left:7;
+  width:100%;
+}
+
+#footer{
+  padding-left:7;
+  width:100%;
+}

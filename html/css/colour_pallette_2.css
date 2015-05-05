@@ -1,0 +1,77 @@
+
+/*
+#004489
+#e1e1d5
+#d3d9df
+#989898
+#565656
+#dbdbce
+#ed5314 -red
+#9bca3e - green
+*/
+body{
+  background-color:#e1e1d5;
+}
+
+#header{
+  background-color:#dbdbce;
+  color:#989898;
+}
+
+#page-body{
+  background-color:#e1e1d5;
+}
+
+#footer{
+  background-color:#dbdbce;
+  color:#989898;  
+}
+
+.vessel-container{
+  background-color:#d3d9df;
+  color:#989898;
+}
+
+.vessel-status{
+  background-color:#d3d9df;
+}
+
+.vessel-graph{
+  background-color:#d3d9df;
+}
+
+.vessel-title{
+  background-color:#d3d9df;
+}
+
+.vessel-temp{
+  background-color:#d3d9df;
+}
+
+.vessel-control{
+  background-color:#d3d9df;
+}
+
+.onoffswitch-inner:before {
+  background-color: #ed5314;
+  color:#555555;
+}
+
+.onoffswitch-inner:after {
+  background-color: #9bca3e;
+  color:#989898;
+}
+
+.onoffswitch-switch {
+  background-color: #dbdbce;
+
+}
+
+.range-handle{
+  background-color: #dbdbce;
+}
+
+
+.range-quantity{
+  background-color: #004489;
+}
