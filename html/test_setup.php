@@ -78,6 +78,14 @@
         <td style="border:1px;border-style:solid">
           <input type="input" id="in_HTMP" style="width:30px;" value="<?php echo $redis->get('HTMP') ?>" onchange="ajaxCall('HTMP',document.getElementById('in_HTMP').value ) "  >
         </td>
+
+        <td style="border:1px;border-style:solid">
+           <h3>HLT Timer</h3>
+        </td>      
+        <td style="border:1px;border-style:solid">
+          <button type="submit" id="in_HTME" style="width:50px;" onclick="ajaxCall('HTME', Math.floor ( (new Date()).getTime() / 1000 )) "  >Reset</button>
+        </td>
+
       </tr>
 
       <!-- Mash Controls  !-->
@@ -90,9 +98,8 @@
         </td>
         <td style="border:1px;border-style:solid">
            <input type="radio" name="rb_MPST" value="0" onclick="ajaxCall('MPST','0')">Off
-        </td>        
-
-       
+        </td>     
+           
         <td style="border:1px;border-style:solid">
            <h3>MASH Value</h3>
         </td>      
@@ -116,6 +123,16 @@
         <td style="border:1px;border-style:solid">
           <input type="input" id="in_MTMP" style="width:30px;" value="<?php echo $redis->get('MTMP') ?>" onchange="ajaxCall('MTMP',document.getElementById('in_MTMP').value ) "  >
         </td>
+        
+
+        <td style="border:1px;border-style:solid">
+           <h3>Mash Timer</h3>
+        </td>   
+        <td style="border:1px;border-style:solid">
+          <button type="submit" id="in_MTME" style="width:50px;" onclick="ajaxCall('MTME', Math.floor ( (new Date()).getTime() / 1000 )) "  >Reset</button>
+        </td>
+     
+                
       </tr>
 
 
@@ -139,6 +156,21 @@
         <td style="border:1px;border-style:solid">
           <input type="input" id="in_BTMP" style="width:30px;" value="<?php echo $redis->get('BTMP') ?>" onchange="ajaxCall('BTMP',document.getElementById('in_BTMP').value ) "  >
         </td>
+
+        <td style="border:1px;border-style:solid">
+           <h3>Start Timer</h3>
+        </td>   
+        <td style="border:1px;border-style:solid">
+          <button type="submit" id="in_BSTM" style="width:50px;" onclick="ajaxCall('BSTM', Math.floor ( (new Date()).getTime() / 1000 )) "  >Reset</button>
+        </td>
+
+        <td style="border:1px;border-style:solid">
+           <h3>Boil Timer</h3>
+        </td>   
+        <td style="border:1px;border-style:solid">
+          <button type="submit" id="in_BTME" style="width:50px;" onclick="ajaxCall('BTME', Math.floor ( (new Date()).getTime() / 1000 )) "  >Reset</button>
+        </td>
+
       </tr>
 
     </table>

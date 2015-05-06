@@ -11,17 +11,24 @@
           echo "<HHST>".$redis->get('HHST')."</HHST>"; 
           echo "<HVST>".$redis->get('HVST')."</HVST>"; 
           echo "<HPST>".$redis->get('HPST')."</HPST>";
-          echo "<HTME>".$redis->get('HTME')."</HTME>";
+          $htime=time() - $redis->get('HTME');
+          echo "<HTME>".$htime."</HTME>";
         echo "</HTL>";
         echo "<MASH>";
           echo "<MTMP>".$redis->get('MTMP')."</MTMP>";
           echo "<MVOL>".$redis->get('MVOL')."</MVOL>";
           echo "<MVST>".$redis->get('MVST')."</MVST>";          
           echo "<MPST>".$redis->get('MPST')."</MPST>";          
+          $mtime=time() - $redis->get('MTME');
+          echo "<MTME>".$mtime."</MTME>";
         echo "</MASH>";
         echo "<Boiler>";
           echo "<BTMP>".$redis->get('BTMP')."</BTMP>";
           echo "<BHST>".$redis->get('BHST')."</BHST>";
+          $bstime=time() - $redis->get('BSTM');
+          echo "<BSTM>".$bstime."</BSTM>";
+          $btime=time() - $redis->get('BTME');
+          echo "<BTME>".$btime."</BTME>";
         echo "</Boiler>";
       echo "</BREWERY_STATUS>";
 ?>
