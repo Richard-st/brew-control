@@ -7,17 +7,21 @@
 <?php 
       echo "<BREWERY_STATUS>";
         echo "<HTL>";
-          echo "<HTMP>" . $redis->get('HTMP') . "</HTMP>";
+          echo "<HTMP>".$redis->get('HTMP')."</HTMP>";
           echo "<HHST>".$redis->get('HHST')."</HHST>"; 
           echo "<HVST>".$redis->get('HVST')."</HVST>"; 
           echo "<HPST>".$redis->get('HPST')."</HPST>";
           echo "<HTME>".$redis->get('HTME')."</HTME>";
         echo "</HTL>";
         echo "<MASH>";
-          echo "<MTMP>10.0</MTMP>";
+          echo "<MTMP>".$redis->get('MTMP')."</MTMP>";
+          echo "<MVOL>".$redis->get('MVOL')."</MVOL>";
+          echo "<MVST>".$redis->get('MVST')."</MVST>";          
+          echo "<MPST>".$redis->get('MPST')."</MPST>";          
         echo "</MASH>";
         echo "<Boiler>";
-          echo "<BTMP>15.0</BTMP>";
+          echo "<BTMP>".$redis->get('BTMP')."</BTMP>";
+          echo "<BHST>".$redis->get('BHST')."</BHST>";
         echo "</Boiler>";
       echo "</BREWERY_STATUS>";
 ?>

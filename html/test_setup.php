@@ -36,8 +36,9 @@
     ?>
 
     <table style="border:1px;border-style:solid;border-collapse:collapse;border-spacing: 0; ">
-      <tr >
-      
+
+      <!-- HLT Controls  !-->
+      <tr >     
         <td style="border:1px;border-style:solid">
            <h3>HLT Heater</h3>
         </td>      
@@ -77,10 +78,69 @@
         <td style="border:1px;border-style:solid">
           <input type="input" id="in_HTMP" style="width:30px;" value="<?php echo $redis->get('HTMP') ?>" onchange="ajaxCall('HTMP',document.getElementById('in_HTMP').value ) "  >
         </td>
-        
-      
-        
       </tr>
+
+      <!-- Mash Controls  !-->
+      <tr >
+        <td style="border:1px;border-style:solid">
+           <h3>Mash Pump</h3>
+        </td>      
+        <td style="border:1px;border-style:solid">
+           <input type="radio" name="rb_MPST" value="1" checked onclick="ajaxCall('MPST','1') ">On
+        </td>
+        <td style="border:1px;border-style:solid">
+           <input type="radio" name="rb_MPST" value="0" onclick="ajaxCall('MPST','0')">Off
+        </td>        
+
+       
+        <td style="border:1px;border-style:solid">
+           <h3>MASH Value</h3>
+        </td>      
+        <td style="border:1px;border-style:solid">
+           <input type="radio" name="rb_MVST" value="1" checked onclick="ajaxCall('MVST','1') ">On
+        </td>
+        <td style="border:1px;border-style:solid">
+           <input type="radio" name="rb_MVST" value="0" onclick="ajaxCall('MVST','0')">Off
+        </td>
+
+        <td style="border:1px;border-style:solid">
+           <h3>Mash Volume</h3>
+        </td>      
+        <td style="border:1px;border-style:solid">
+          <input type="input" id="in_MVOL" style="width:30px;" value="<?php echo $redis->get('MVOL') ?>" onchange="ajaxCall('MVOL',document.getElementById('in_MVOL').value ) "  >
+        </td>
+
+        <td style="border:1px;border-style:solid">
+           <h3>Mash Temp</h3>
+        </td>      
+        <td style="border:1px;border-style:solid">
+          <input type="input" id="in_MTMP" style="width:30px;" value="<?php echo $redis->get('MTMP') ?>" onchange="ajaxCall('MTMP',document.getElementById('in_MTMP').value ) "  >
+        </td>
+      </tr>
+
+
+      <!-- Boiler Controls  !-->
+      <tr >
+       
+        <td style="border:1px;border-style:solid">
+           <h3>Boiler Heater</h3>
+        </td>      
+        <td style="border:1px;border-style:solid">
+           <input type="radio" name="rb_BHST" value="1" checked onclick="ajaxCall('BHST','1') ">On
+        </td>
+        <td style="border:1px;border-style:solid">
+           <input type="radio" name="rb_BHST" value="0" onclick="ajaxCall('BHST','0')">Off
+        </td>
+
+
+        <td style="border:1px;border-style:solid">
+           <h3>Boiler Temp</h3>
+        </td>      
+        <td style="border:1px;border-style:solid">
+          <input type="input" id="in_BTMP" style="width:30px;" value="<?php echo $redis->get('BTMP') ?>" onchange="ajaxCall('BTMP',document.getElementById('in_BTMP').value ) "  >
+        </td>
+      </tr>
+
     </table>
 
    
