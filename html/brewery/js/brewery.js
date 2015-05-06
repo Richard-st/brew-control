@@ -22,9 +22,8 @@
 			var disableHltVolRefresh=false; 			
 
 			function drawGauge() {
-
 				gaugeData = new google.visualization.DataTable();
-	
+
 	
 				gaugeData.addColumn('number', 'HLT');
 				//gaugeData.addColumn('number', 'Mash');
@@ -138,7 +137,7 @@
       		timerBox('BSTM'); //Boiler Start Time	      		 
       		timerBox('BTME'); //Time Boiling
 
-      				
+				
       		    	
 	      	//update box
 					if (!disableHltTempRefresh){
@@ -147,12 +146,10 @@
 					if (!disableHltVolRefresh){
   	  			document.getElementById('HXRV').value = xmlDoc.getElementsByTagName("HXRV")[0].childNodes[0].nodeValue;
   	  		}  	  		
-
   	  		var dt = new Date(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue *1000 );  	  		
   	  		//document.getElementById('TIME').value = xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue;  
   	  		document.getElementById('TIME').innerHTML = pad(dt.getHours(),2) + ':' + pad(dt.getMinutes(),2) ; 
-  	  		
-  	  		
+  	  		 	  		
   	  		//update graph
   	  		if (graphCounter >= 10){
 						updateChart(1,parseInt(xmlDoc.getElementsByTagName("HTMP")[0].childNodes[0].nodeValue),

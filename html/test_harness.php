@@ -8,9 +8,11 @@
       echo "<BREWERY_STATUS>";
         echo "<HTL>";
           echo "<HTMP>".$redis->get('HTMP')."</HTMP>";
+          echo "<HTGT>10</HTGT>";
           echo "<HHST>".$redis->get('HHST')."</HHST>"; 
           echo "<HVST>".$redis->get('HVST')."</HVST>"; 
           echo "<HPST>".$redis->get('HPST')."</HPST>";
+          echo "<HXRV>10</HXRV>";
           $htime=time() - $redis->get('HTME');
           echo "<HTME>".$htime."</HTME>";
         echo "</HTL>";
@@ -30,5 +32,6 @@
           $btime=time() - $redis->get('BTME');
           echo "<BTME>".$btime."</BTME>";
         echo "</Boiler>";
+        echo "<TIME>".time()."</TIME>";
       echo "</BREWERY_STATUS>";
 ?>

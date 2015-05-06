@@ -22,7 +22,6 @@
 			var disableHltVolRefresh=false; 			
 
 			function drawGauge() {
-
 				gaugeData = new google.visualization.DataTable();
 	
 	

@@ -55,7 +55,6 @@
   	
   	function updateChart(iType, fTemp, fTime ){
 
-
   			var date = new Date(fTime*1000);
 				var hours = date.getHours();
 				var minutes = date.getMinutes();
