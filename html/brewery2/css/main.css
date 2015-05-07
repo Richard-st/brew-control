@@ -1,0 +1,173 @@
+body{
+  width : 100%; 
+  height: 100%;
+  margin: 0;
+  padding : 0;
+  font-family :  "Helvetica","Arial", "Helvetica" ;  
+}
+
+#canvass{
+  width : 100%; 
+  height: 100%;
+}
+
+#header{
+  background : lightblue;
+  width : 100%; 
+  height: 7%;
+  float: left;
+  font-size: 30px; 
+  padding-left: 20px; 
+  padding-top: 15px; 
+
+}
+
+#footer{
+  
+  background : pink;
+  width : 100%; 
+  height: 10%;
+  float: left;
+  position:relative;
+  font-size: 20px;
+  padding-left: 20px; 
+  padding-top: 15px;   
+}
+
+#page-body{
+  background : orange;
+  width : 100%; 
+  float: left;
+  position:relative;  
+  minimum-height:400px;
+  height:80%;
+  padding:10px;
+}
+
+
+.vessel-container {
+  color : red;
+  background : grey;
+  float : left;
+  width : 25%;
+  height : 500px;
+  margin-right : 1%;
+  margin-top : 2%;
+  min-width:330px;
+  max-width:330px;
+  
+  }
+  
+
+.vessel-title {
+  background-color : light-grey;
+  width:auto;
+  height:10%;
+  
+  margin-left:1%;
+  margin-right:1%; 
+   
+  padding-left:1%;
+  padding-right:1%;  
+  padding-top:1%;
+  padding-bottom:1%;   
+  
+  font-weight:bold;
+  font-size:20;
+  
+}  
+  
+.vessel-status {
+  background-color : white;
+  width:auto;
+  height:40%;
+  
+   
+  padding-left:1%;
+  padding-right:1%;  
+  padding-top:1%;
+  padding-bottom:1%;  
+  
+}  
+
+.vessel-temp {
+  background-color : blue;
+  width:49%;
+  height:100%;
+
+  float:left;
+  
+  padding-left:1%;
+  padding-right:1%;  
+  
+
+  font-size:140;  
+  font-family :  "Helvetica","Arial", "Helvetica" ;
+}
+
+.vessel-graph {
+  background-color : green;
+  width:49%;
+  height:100%;
+  float:left;
+}  
+
+#hlt_chart{
+  height:100%;
+ }
+#mash_chart{
+  height:100%;
+ } 
+#boil_chart{
+  height:100%;
+ }  
+ 
+
+.vessel-timer {
+  float:left;
+
+  font-size:20;  
+  font-family :  "Helvetica","Arial", "Helvetica" ;  
+  padding-top:5px;
+  padding-left:15px;
+  width:40%;
+
+}
+
+.display-box{
+  width:50%;
+}
+
+
+
+.vessel-control {
+  background-color : yellow;
+  width:98%;
+  height:40%;
+  float:left;
+  padding-left:1%;
+  padding-right:1%;  
+  font-family :  "Helvetica","Arial", "Helvetica" ;
+} 
+
+.tb-vessel-control{
+  width:100%;
+  padding-top:10px;
+}
+
+.tr-vessel-control-control{
+}
+
+
+.td-vessel-control-switch{
+  width:30%;
+  padding-top:30px;  
+}
+
+.td-vessel-control-slider{
+  width:70%;
+  padding-top:30px;  
+}
+
+    
+
