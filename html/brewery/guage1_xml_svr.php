@@ -28,7 +28,7 @@ session_start();
 		    	//$row = mysql_fetch_array($result);	
 		    	error_reporting(E_ERROR | E_PARSE);
 			//debig $ch = curl_init("http://".$_SESSION['sLocalIp']."/request=".$_GET['Type']);
-			$uri="http://localhost/test_harness.php/request=".$_GET['Type'];
+			$uri="http://localhost/test_harness.php/?request=".$_GET['Type'];  //added ? to request. may need to be added for Arduino
 			echo ($uri);		
 			$ch = curl_init($uri);
 			curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -44,7 +44,7 @@ session_start();
 		    	//$row = mysql_fetch_array($result);
 		    	error_reporting(E_ERROR | E_PARSE);
 			//$ch = curl_init("http://".$_SESSION['sLocalIp']."/request=".$_GET['Type'].":".str_pad($_GET['Value'],3,0, STR_PAD_LEFT));
-			$ch = curl_init("http://localhost//test_harness.php/request=".$_GET['Type'].":".str_pad($_GET['Value'],3,0, STR_PAD_LEFT));
+			$ch = curl_init("http://localhost//test_harness.php/?request=".$_GET['Type'].":".str_pad($_GET['Value'],3,0, STR_PAD_LEFT)); //added ? to request. may need to be added for Arduino
 			curl_setopt($ch, CURLOPT_HEADER, 0);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 			curl_exec($ch);
