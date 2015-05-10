@@ -7,7 +7,7 @@
     if (httpObject != null) {
       httpObject.open("GET", "brewery_svr.php?arduinoCall=updateStatus", true);
       httpObject.send(null);
-      httpObject.onreadystatechange = processArduinoResponse;
+      httpObject.onreadystatechange = processArduinoStatus;
     }
   }     
   
@@ -17,37 +17,54 @@
   ///////////////////////////////////////////////////
   function sendInstruction(iRequestType,iValue){
     httpObject = getHTTPObject();
+    
+    if (iRequestType == "HLTHeaterSwitch"){
+    	if  (document.getElementById('hltHeadterOnOff').checked == true){
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=HHOF", true);    		
+        }
+        else{
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=HHON", true);    		
+        }
+        httpObject.send(null);
+//        httpObject.onreadystatechange = processArduinoResponse; check, but dont think I am interested in response
+    }
+    
+    /*
     if (httpObject != null) {
      if (iValue == "") 
-       httpObject.open("GET", "brewery_svr.php?arduinoCall=Request&Type="+iRequestType, true);
+       httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type="+iRequestType, true);
      else 
-       httpObject.open("GET", "brewery_svr.php?arduinoCall=Request&Type="+iRequestType+"&Value="+iValue, true);
+       httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type="+iRequestType+"&value="+iValue, true);
        httpObject.send(null);
        httpObject.onreadystatechange = processArduinoResponse;
-    }     	
+    } 
+    */    	
   }  
   
-
-  ///////////////////////////////////////////////////
-  // Create HTTP request object - used for AJAX
-  ///////////////////////////////////////////////////
-  function getHTTPObject(){
-    if (window.ActiveXObject) return new ActiveXObject("Microsoft.XMLHTTP");
-    else 
-      if (window.XMLHttpRequest) return new XMLHttpRequest();
-      else {
-        alert("Your browser does not support AJAX.");
-        return null;
-      }
-  }
-
-
   ///////////////////////////////////////////////////
   // Function will be called each time state of the 
   // server call changes. State 4 ,means response 
   // received. Ignore anything other than 4 
   ///////////////////////////////////////////////////
   function processArduinoResponse(){
+    if(httpObject.readyState == 4){
+      if (window.DOMParser){     
+        parser=new DOMParser();
+      }
+      else{ // Internet Explorer
+        xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+        xmlDoc.async=false;
+      }
+    }
+  }
+      
+  ///////////////////////////////////////////////////
+  // Function will be called each time state of the 
+  // server call changes. State 4 ,means response 
+  // received. Ignore anything other than 4 
+  ///////////////////////////////////////////////////
+
+  function processArduinoStatus(){
     if(httpObject.readyState == 4){
       if (window.DOMParser){     
         parser=new DOMParser();
@@ -62,7 +79,7 @@
    //-----------------------------------------------------------------------------------------------------
    // update main screen clock
    //-----------------------------------------------------------------------------------------------------
-      var dt = new Date(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue *1000 );  	  		
+      var dt = new Date(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue *1000 );  
       document.getElementById('TIME').innerHTML = pad(dt.getHours(),2) + ':' + pad(dt.getMinutes(),2) ;            
 
    //-----------------------------------------------------------------------------------------------------
@@ -112,6 +129,19 @@
   ///////////////////////////////////////////////////
   // Utility functions
   ///////////////////////////////////////////////////
+
+  // Create the HTTP Object
+  function getHTTPObject(){
+    if (window.ActiveXObject) 
+      return new ActiveXObject("Microsoft.XMLHTTP");
+    else 
+      if (window.XMLHttpRequest) 
+        return new XMLHttpRequest();
+      else {
+        alert("Your browser does not support AJAX.");
+        return null;
+      }
+  }
 
   function pad(number, length) {
     var str = '' + number;

@@ -120,8 +120,8 @@
                   <tr class="tr-vessel-control-control"> 
                     <td class="td-vessel-control-switch">
                       <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="hltHeadterOnOff" >
-                        <label class="onoffswitch-label"  for="hltHeadterOnOff">
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="hltHeadterOnOff"   >
+                        <label class="onoffswitch-label"  for="hltHeadterOnOff" onclick='sendInstruction("HLTHeaterSwitch","")'>
                           <span class="hltHeaterOnOffSwitch-inner onoffswitch-inner" ></span>
                           <span class="onoffswitch-switch"></span>
                         </label>
