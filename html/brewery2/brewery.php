@@ -129,7 +129,7 @@
                     </td>
                     <td class="td-vessel-control-slider">
                       <div class="slider-wrapper" style="float:left;width:100%">
-                        <input type="text" class="hltTempSet" />
+                        <input type="text" id="HTGT" class="hltTempSet" onchange='sendInstruction("HTGT",document.getElementById("HTGT").value)'  />
                         <div id="hltTempSet" class="display-box"></div>
                       </div>
                     </td> 
@@ -140,7 +140,7 @@
                     <td class="td-vessel-control-switch">                     
                       <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="hltPumpOnOff" unchecked>
-                        <label class="onoffswitch-label" for="hltPumpOnOff">
+                        <label class="onoffswitch-label" for="hltPumpOnOff" onclick='sendInstruction("HLTPumpSwitch","")'>
                           <span class="hltPumpOnOffSwitch-inner onoffswitch-inner"></span>
                           <span class="onoffswitch-switch"></span>
                         </label>
@@ -148,7 +148,7 @@
                     </td>
                     <td class="td-vessel-control-slider">
                       <div class="slider-wrapper" style="float:left;width:100%">
-                        <input type="text" class="hltXferSet" />
+                        <input type="text" id="HXRV" class="hltXferSet" onchange='sendInstruction("HXRV",document.getElementById("HXRV").value)' />
                         <div id="hltXferSet" class="display-box"></div>
                       </div>
                     </td>                     
@@ -190,7 +190,7 @@
                     <td class="td-vessel-control-switch">
                       <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="mashPumpOnOff" unchecked>
-                        <label class="onoffswitch-label"  for="mashPumpOnOff">
+                        <label class="onoffswitch-label"  for="mashPumpOnOff" onclick='sendInstruction("mashPumpSwitch","")'>
                           <span class="mashPumpOnOffSwitch-inner onoffswitch-inner" ></span>
                           <span class="onoffswitch-switch"></span>
                         </label>
@@ -225,7 +225,7 @@
                     <td class="td-vessel-control-switch">
                       <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="boilHeaterOnOff" unchecked>
-                        <label class="onoffswitch-label"  for="boilHeaterOnOff">
+                        <label class="onoffswitch-label"  for="boilHeaterOnOff" onclick='sendInstruction("boilHeaterSwitch","")'>
                           <span class="boilHeaterOnOffSwitch-inner onoffswitch-inner" ></span>
                           <span class="onoffswitch-switch"></span>
                         </label>
@@ -245,7 +245,7 @@
     </div>   
   </div>  
   
- <script src="dist/powerange.min.js"></script>
+ <script src="dist/powerange.js"></script>
   <script type="text/javascript">
 
      // HTL Temp

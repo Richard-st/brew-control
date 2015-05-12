@@ -25,20 +25,49 @@
         else{
           httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=HHON", true);    		
         }
-        httpObject.send(null);
-//        httpObject.onreadystatechange = processArduinoResponse; check, but dont think I am interested in response
     }
     
-    /*
-    if (httpObject != null) {
-     if (iValue == "") 
-       httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type="+iRequestType, true);
-     else 
-       httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type="+iRequestType+"&value="+iValue, true);
-       httpObject.send(null);
-       httpObject.onreadystatechange = processArduinoResponse;
-    } 
-    */    	
+    if (iRequestType == "HLTPumpSwitch"){
+    	if  (document.getElementById('hltPumpOnOff').checked == true){
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=HPOF", true);    		
+        }
+        else{
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=HPON", true);    		
+        }
+    }
+
+    if (iRequestType == "mashPumpSwitch"){
+    	if  (document.getElementById('mashPumpOnOff').checked == true){
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=MPOF", true);    		
+        }
+        else{
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=MPON", true);    		
+        }
+    }
+
+    if (iRequestType == "boilHeaterSwitch"){
+    	if  (document.getElementById('boilHeaterOnOff').checked == true){
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=BHOF", true);    		
+        }
+        else{
+          httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=BHON", true);    		
+        }
+    }
+
+    if (iRequestType == "HTGT"){
+        httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=HTGT&value="+iValue, true);    	
+    }
+
+    if (iRequestType == "HXRV"){
+        httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=HXRV&value="+iValue, true);    	
+    }
+
+
+    //send request
+    httpObject.send(null);	
+
+
+    
   }  
   
   ///////////////////////////////////////////////////
@@ -113,6 +142,15 @@
         document.getElementById('boilHeaterOnOff').checked = true;
       else
         document.getElementById('boilHeaterOnOff').checked = false;        
+
+
+   //-----------------------------------------------------------------------------------------------------
+   // update sliders
+   //-----------------------------------------------------------------------------------------------------
+      document.getElementById('js-display-temp').innerHTML =    xmlDoc.getElementsByTagName("HTGT")[0].childNodes[0].nodeValue+' c';        
+
+      document.getElementById('js-display-xfer').innerHTML =    xmlDoc.getElementsByTagName("HXRV")[0].childNodes[0].nodeValue+' litres';        
+
 
 
    //-----------------------------------------------------------------------------------------------------

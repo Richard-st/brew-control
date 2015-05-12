@@ -27,7 +27,12 @@
     $root = $dom->createElement("brewery");
     $dom->appendChild($root);
     error_reporting(E_ERROR | E_PARSE);
-    $uri="http://localhost//test_harness.php/?request=".$_GET['type'];
+
+    if ( !isset($_GET['value']) )
+      $uri="http://localhost//test_harness.php/?request=".$_GET['type'];
+    else
+      $uri="http://localhost//test_harness.php/?request=".$_GET['type'].":".$_GET['value'];
+    
     echo $uri;
     $ch = curl_init($uri);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
