@@ -1,2 +1,2 @@
-hell0
+hell02
 <?php phpinfo(); ?>
