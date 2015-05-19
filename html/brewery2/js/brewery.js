@@ -1,3 +1,5 @@
+  var graphCounter=10; //initial startup to display a graph
+ 
  
   ///////////////////////////////////////////////////
   // Call Server asking Arduino for a status update
@@ -151,7 +153,21 @@
 
       document.getElementById('js-display-xfer').innerHTML =    xmlDoc.getElementsByTagName("HXRV")[0].childNodes[0].nodeValue+' litres';        
 
-
+   //-----------------------------------------------------------------------------------------------------
+   //update graph
+   //-----------------------------------------------------------------------------------------------------
+  		if (graphCounter >= 1){
+			updateChart(1,parseInt(xmlDoc.getElementsByTagName("HTMP")[0].childNodes[0].nodeValue),
+			              parseInt(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue)); 	 
+			updateChart(2,parseInt(xmlDoc.getElementsByTagName("MTMP")[0].childNodes[0].nodeValue),
+			              parseInt(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue)); 	 
+			updateChart(3,parseInt(xmlDoc.getElementsByTagName("BTMP")[0].childNodes[0].nodeValue),
+			              parseInt(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue));
+			graphCounter = 1;
+		}  	
+		else
+			graphCounter +=1;
+  		
 
    //-----------------------------------------------------------------------------------------------------
    // update other clocks

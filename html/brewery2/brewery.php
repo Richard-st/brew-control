@@ -10,12 +10,15 @@
   <link rel="stylesheet" href="dist/powerange.css" />  
 
   <link rel="stylesheet" href="css/colour_pallette_2.css">
+  
+  
+  <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 
-  <script type='text/javascript' src='js/brewery.js'> </script>
+  <script type='text/javascript' src='js/brewery.js'> </script> 
 
-
-
-    <script type="text/javascript"
+  <script type='text/javascript' src='js/vessel_graph.js'> </script>
+ 
+<!--     <script type="text/javascript"
           src="https://www.google.com/jsapi?autoload={
             'modules':[{
               'name':'visualization',
@@ -79,7 +82,7 @@
       }
 
     </script>          
-
+ -->
 
 
 
