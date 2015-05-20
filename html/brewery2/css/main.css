@@ -92,7 +92,7 @@ body{
 
 .vessel-temp {
   background-color : blue;
-  width:49%;
+  width:45%;
   height:100%;
 
   float:left;
@@ -101,13 +101,13 @@ body{
   padding-right:1%;  
   
 
-  font-size:140;  
+  font-size:120;  
   font-family :  "Helvetica","Arial", "Helvetica" ;
 }
 
 .vessel-graph {
   background-color : green;
-  width:49%;
+  width:51%;
   height:100%;
   float:left;
 }  

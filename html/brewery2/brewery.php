@@ -125,7 +125,7 @@
                       <div class="onoffswitch">
                         <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="hltHeadterOnOff"   >
                         <label class="onoffswitch-label"  for="hltHeadterOnOff" onclick='sendInstruction("HLTHeaterSwitch","")'>
-                          <span class="hltHeaterOnOffSwitch-inner onoffswitch-inner" ></span>
+                          <span id="onOffSwitchHltHeater" class="hltHeaterOnOffSwitch-inner onoffswitch-inner" ></span>
                           <span class="onoffswitch-switch"></span>
                         </label>
                       </div>               

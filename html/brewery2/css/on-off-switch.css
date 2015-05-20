@@ -17,7 +17,20 @@
     -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
     -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
 }
-.onoffswitch-inner:before, .onoffswitch-inner:after {
+
+.onoffswitchArmed-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after{
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.onoffswitchArmed-inner:before, .onoffswitchArmed-inner:after{
     display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
     font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -30,6 +43,15 @@
 .hltHeaterOnOffSwitch-inner:after {
     content: "Heater Off";
 }
+
+.hltHeaterOnOffSwitchArmed-inner:before {
+    content: "Heater On";
+}
+
+.hltHeaterOnOffSwitchArmed-inner:after {
+    content: "-- Armed --";
+}
+
 
 .hltPumpOnOffSwitch-inner:before {
     content: "Pump On";
@@ -55,16 +77,30 @@
     content: "Heater Off";
 }
 
-.onoffswitch-inner:before {
+.onoffswitch-inner:before   {
     padding-left: 10px;
     background-color: red; color: #FFFFFF;
 }
 
-.onoffswitch-inner:after {
+.onoffswitch-inner:after   {
     padding-right: 10px;
     background-color: green; color: #999999;
     text-align: right;
 }
+
+
+.onoffswitchArmed-inner:before   {
+    padding-left: 10px;
+    background-color: red; color: #FFFFFF;
+}
+
+.onoffswitchArmed-inner:after   {
+    padding-right: 10px;
+    background-color: green; color: #999999;
+    text-align: right;
+}
+
+
 .onoffswitch-switch {
     display: block; width: 20px; margin: 0px;
     background: #FFFFFF;

@@ -43,10 +43,7 @@
       	//hlt
       	//      		
       	  case  "HHON" :
-      	     if ($redis->get("HHST") == 0)
-      	        $redis->set("HHST", "2");
-      	     else 
-      	        $redis->set("HHST", "1");      	        
+      	     $redis->set("HHST", "1"); 
       	     break;
       	  case  "HHOF" :
       	     $redis->set("HHST", "0"); 
@@ -77,16 +74,6 @@
       	     break;     	
       	  case  "MPOF" :
       	     $redis->set("MPST", "0"); 
-      	     break;     	
-     	
-     	//
-     	// Mash
-     	//
-      	  case  "BHON" :
-      	     $redis->set("BHST", "1"); 
-      	     break;     	
-      	  case  "BHOF" :
-      	     $redis->set("BHST", "0"); 
       	     break;     	
      	
         }

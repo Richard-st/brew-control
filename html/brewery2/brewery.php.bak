@@ -10,15 +10,12 @@
   <link rel="stylesheet" href="dist/powerange.css" />  
 
   <link rel="stylesheet" href="css/colour_pallette_2.css">
-  
-  
-  <script type='text/javascript' src='https://www.google.com/jsapi'></script>
 
-  <script type='text/javascript' src='js/brewery.js'> </script> 
+  <script type='text/javascript' src='js/brewery.js'> </script>
 
-  <script type='text/javascript' src='js/vessel_graph.js'> </script>
- 
-<!--     <script type="text/javascript"
+
+
+    <script type="text/javascript"
           src="https://www.google.com/jsapi?autoload={
             'modules':[{
               'name':'visualization',
@@ -82,7 +79,7 @@
       }
 
     </script>          
- -->
+
 
 
 
@@ -93,7 +90,7 @@
   <div id="canvass">
     <div id="header">
       <h9 id="TIME" >Time</h9>
-      Nano Brewery1
+      Nano Brewery
     </div>
     <div id="page-body">
       
@@ -132,7 +129,7 @@
                     </td>
                     <td class="td-vessel-control-slider">
                       <div class="slider-wrapper" style="float:left;width:100%">
-                        <input type="text" id="HTGT" class="hltTempSet" onchange='sendInstruction("HTGT",document.getElementById("HTGT").value)'  />
+                        <input type="text" id="HTGT" class="hltTempSet" onxxchange='sendInstruction("HTGT",document.getElementById("HTGT").value)'  />
                         <div id="hltTempSet" class="display-box"></div>
                       </div>
                     </td> 

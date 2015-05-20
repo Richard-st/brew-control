@@ -62,6 +62,15 @@ body{
   color:#989898;
 }
 
+.onoffswitchArmed-inner:after {
+  background-color: yellow;
+  color:#989898;
+}
+
+.onoffswitchArmed-inner:before {
+  background-color: #ed5314;
+  color:#555555;
+}
 .onoffswitch-switch {
   background-color: #dbdbce;
 
