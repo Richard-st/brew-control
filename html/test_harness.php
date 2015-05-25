@@ -80,14 +80,18 @@
       	     break;     	
      	
      	//
-     	// Mash
+     	// Boiler
      	//
       	  case  "BHON" :
-      	     $redis->set("BHST", "1"); 
-      	     break;     	
+      	     if ($redis->get("BHST") == 0)
+      	        $redis->set("BHST", "2");
+      	     else 
+      	        $redis->set("BHST", "1");      	        
+      	     break;  
       	  case  "BHOF" :
       	     $redis->set("BHST", "0"); 
-      	     break;     	
+     	     break;      	        	
+     	
      	
         }
       }

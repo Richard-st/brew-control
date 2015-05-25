@@ -48,7 +48,7 @@
     }
 
     if (iRequestType == "boilHeaterSwitch"){
-    	if  (document.getElementById('boilHeaterOnOff').checked == true){
+    	if  (document.getElementById('boilHeadterOnOff').checked == true){
           httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=BHOF", true);    		
         }
         else{
@@ -140,8 +140,7 @@
       if (xmlDoc.getElementsByTagName("HHST")[0].childNodes[0].nodeValue== 0){
         // set to off
         document.getElementById('hltHeadterOnOff').checked = false;
-       // var d=document.getElementById('onOffSwitchHltHeater'); 
-       // d.className =" hltHeaterOnOffSwitch-inner onoffswitch-inner"; // adding new class name
+
       }
    
       if (xmlDoc.getElementsByTagName("HPST")[0].childNodes[0].nodeValue== 1)
@@ -155,11 +154,32 @@
       else
         document.getElementById('mashPumpOnOff').checked = false;
         
-   
+   /*
       if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 1)
         document.getElementById('boilHeaterOnOff').checked = true;
       else
         document.getElementById('boilHeaterOnOff').checked = false;        
+*/
+
+      if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 1){
+        //set to on
+        document.getElementById('boilHeadterOnOff').checked = true;
+        var d=document.getElementById('onOffSwitchBoilHeater'); 
+        d.className =" boilHeaterOnOffSwitch-inner onoffswitch-inner"; // adding new class name
+      }
+
+      if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 2){
+      //set to armed
+        var d=document.getElementById('onOffSwitchBoilHeater'); 
+        d.className =" boilHeaterOnOffSwitchArmed-inner onoffswitchArmed-inner"; // adding new class name
+        document.getElementById('boilHeadterOnOff').checked = false;
+      }
+
+      if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 0){
+        // set to off
+        document.getElementById('boilHeadterOnOff').checked = false;
+      }
+
 
 
    //-----------------------------------------------------------------------------------------------------
@@ -244,6 +264,6 @@
   // timer to get status updates
   ///////////////////////////////////////////////////
     var time = 1;                //time in seconds
-    var interval = time * 500;
+    var interval = time * 100;
     var timer = setInterval("getStatus()", interval);
     

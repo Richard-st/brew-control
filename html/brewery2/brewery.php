@@ -227,9 +227,9 @@
                   <tr class="tr-vessel-control-control"> 
                     <td class="td-vessel-control-switch">
                       <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="boilHeaterOnOff" unchecked>
-                        <label class="onoffswitch-label"  for="boilHeaterOnOff" onclick='sendInstruction("boilHeaterSwitch","")'>
-                          <span class="boilHeaterOnOffSwitch-inner onoffswitch-inner" ></span>
+                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="boilHeadterOnOff" unchecked>
+                        <label class="onoffswitch-label"  for="boilHeadterOnOff" onclick='sendInstruction("boilHeaterSwitch","")'>
+                          <span id="onOffSwitchBoilHeater" class="boilHeaterOnOffSwitch-inner onoffswitch-inner" ></span>
                           <span class="onoffswitch-switch"></span>
                         </label>
                       </div>               
