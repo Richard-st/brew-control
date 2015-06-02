@@ -1,3 +1,5 @@
+  var graphCounter=10; //initial startup to display a graph
+ 
  
   ///////////////////////////////////////////////////
   // Call Server asking Arduino for a status update
@@ -46,7 +48,7 @@
     }
 
     if (iRequestType == "boilHeaterSwitch"){
-    	if  (document.getElementById('boilHeaterOnOff').checked == true){
+    	if  (document.getElementById('boilHeadterOnOff').checked == true){
           httpObject.open("GET", "brewery_svr.php?arduinoCall=request&type=BHOF", true);    		
         }
         else{
@@ -108,8 +110,8 @@
    //-----------------------------------------------------------------------------------------------------
    // update main screen clock
    //-----------------------------------------------------------------------------------------------------
-      var dt = new Date(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue *1000 );  
-      document.getElementById('TIME').innerHTML = pad(dt.getHours(),2) + ':' + pad(dt.getMinutes(),2) ;            
+   //$$$   var dt = new Date(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue *1000 );  
+   //$$$   document.getElementById('TIME').innerHTML = pad(dt.getHours(),2) + ':' + pad(dt.getMinutes(),2) ;            
 
    //-----------------------------------------------------------------------------------------------------
    // update tempratures
@@ -121,10 +123,25 @@
    //-----------------------------------------------------------------------------------------------------
    // Switch control
    //-----------------------------------------------------------------------------------------------------
-      if (xmlDoc.getElementsByTagName("HHST")[0].childNodes[0].nodeValue== 1)
+      if (xmlDoc.getElementsByTagName("HHST")[0].childNodes[0].nodeValue== 1){
+        //set to on
         document.getElementById('hltHeadterOnOff').checked = true;
-      else
+        var d=document.getElementById('onOffSwitchHltHeater'); 
+        d.className =" hltHeaterOnOffSwitch-inner onoffswitch-inner"; // adding new class name
+      }
+
+      if (xmlDoc.getElementsByTagName("HHST")[0].childNodes[0].nodeValue== 2){
+      //set to armed
+        var d=document.getElementById('onOffSwitchHltHeater'); 
+        d.className =" hltHeaterOnOffSwitchArmed-inner onoffswitchArmed-inner"; // adding new class name
         document.getElementById('hltHeadterOnOff').checked = false;
+      }
+
+      if (xmlDoc.getElementsByTagName("HHST")[0].childNodes[0].nodeValue== 0){
+        // set to off
+        document.getElementById('hltHeadterOnOff').checked = false;
+
+      }
    
       if (xmlDoc.getElementsByTagName("HPST")[0].childNodes[0].nodeValue== 1)
         document.getElementById('hltPumpOnOff').checked = true;
@@ -137,11 +154,32 @@
       else
         document.getElementById('mashPumpOnOff').checked = false;
         
-   
+   /*
       if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 1)
         document.getElementById('boilHeaterOnOff').checked = true;
       else
         document.getElementById('boilHeaterOnOff').checked = false;        
+*/
+
+      if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 1){
+        //set to on
+        document.getElementById('boilHeadterOnOff').checked = true;
+        var d=document.getElementById('onOffSwitchBoilHeater'); 
+        d.className =" boilHeaterOnOffSwitch-inner onoffswitch-inner"; // adding new class name
+      }
+
+      if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 2){
+      //set to armed
+        var d=document.getElementById('onOffSwitchBoilHeater'); 
+        d.className =" boilHeaterOnOffSwitchArmed-inner onoffswitchArmed-inner"; // adding new class name
+        document.getElementById('boilHeadterOnOff').checked = false;
+      }
+
+      if (xmlDoc.getElementsByTagName("BHST")[0].childNodes[0].nodeValue== 0){
+        // set to off
+        document.getElementById('boilHeadterOnOff').checked = false;
+      }
+
 
 
    //-----------------------------------------------------------------------------------------------------
@@ -149,9 +187,23 @@
    //-----------------------------------------------------------------------------------------------------
       document.getElementById('js-display-temp').innerHTML =    xmlDoc.getElementsByTagName("HTGT")[0].childNodes[0].nodeValue+' c';        
 
-      document.getElementById('js-display-temp').innerHTML =    xmlDoc.getElementsByTagName("HXRV")[0].childNodes[0].nodeValue+' litres';        
+      document.getElementById('js-display-xfer').innerHTML =    xmlDoc.getElementsByTagName("HXRV")[0].childNodes[0].nodeValue+' litres';        
 
-
+   //-----------------------------------------------------------------------------------------------------
+   //update graph
+   //-----------------------------------------------------------------------------------------------------
+  		if (graphCounter >= 10){
+			updateChart(1,parseInt(xmlDoc.getElementsByTagName("HTMP")[0].childNodes[0].nodeValue),
+			              parseInt(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue)); 	 
+			updateChart(2,parseInt(xmlDoc.getElementsByTagName("MTMP")[0].childNodes[0].nodeValue),
+			              parseInt(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue)); 	 
+			updateChart(3,parseInt(xmlDoc.getElementsByTagName("BTMP")[0].childNodes[0].nodeValue),
+			              parseInt(xmlDoc.getElementsByTagName("TIME")[0].childNodes[0].nodeValue));
+			graphCounter = 1;
+		}  	
+		else
+			graphCounter +=1;
+  		
 
    //-----------------------------------------------------------------------------------------------------
    // update other clocks
@@ -212,6 +264,6 @@
   // timer to get status updates
   ///////////////////////////////////////////////////
     var time = 1;                //time in seconds
-    var interval = time * 500;
+    var interval = time * 100;
     var timer = setInterval("getStatus()", interval);
     

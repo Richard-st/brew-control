@@ -42,23 +42,38 @@ body{
   minimum-height:400px;
   height:80%;
   padding:10px;
+  
+  text-align: justify;
+  min-width : 1160px;
+    
 }
 
+#page-body:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
 
 .vessel-container {
   color : red;
   background : grey;
-  float : left;
+  /float : left;
   width : 25%;
   height : 500px;
-  margin-right : 1%;
+  margin-right : 4%;
   margin-top : 2%;
   min-width:330px;
   max-width:330px;
   
+  vertical-align: top;
+  display: inline-block;
+  *display: inline;
+  /zoom: 1;
+  
   }
   
-
 .vessel-title {
   background-color : light-grey;
   width:auto;
