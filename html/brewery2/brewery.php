@@ -18,71 +18,6 @@
 
   <script type='text/javascript' src='js/vessel_graph.js'> </script>
  
-<!--     <script type="text/javascript"
-          src="https://www.google.com/jsapi?autoload={
-            'modules':[{
-              'name':'visualization',
-              'version':'1',
-              'packages':['corechart']
-            }]
-          }"></script>
-     <script type="text/javascript">
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Time', 'Temp'],
-          ['2004',  30],
-          ['2005',  40],
-          ['2006',  50],
-          ['2007',  55]
-        ]);
-
-        var options = {
-          backgroundColor:{fill:'#d3d9df'},
-          curveType: 'function',
-          width:'100%',
-          legend: {position:'none'},
-          hAxis:{textStyle:{fontsize:1}},
-          hAxis:{
-               height:1,
-               baselineColor: '#fff',
-               gridlineColor: '#fff',
-               textPosition: 'none'},
-          vAxis: { minValue:0,
-      	          maxValue:100},
-    	  chartArea: {left:20,
-    	              top:5,
-    	              bottom:0,
-    		      width:'100%',
-    		      height:'95%'},    
-          series:{0:{color:'#004489'}}
-       
-        };
-
-        function resize () {
-        var chart = new google.visualization.LineChart(document.getElementById('hlt_chart'));
-        chart.draw(data, options);
-        }
-        
-        function resize_mash () {
-        var mash_chart = new google.visualization.LineChart(document.getElementById('mash_chart'));
-        mash_chart.draw(data, options);
-        }
-        
-        function resize_boil () {
-        var boil_chart = new google.visualization.LineChart(document.getElementById('boil_chart'));
-        boil_chart.draw(data, options);
-        }        
-
-        window.onload = resize();
-        window.onload = resize_mash();
-        window.onload = resize_boil();        
-        window.onresize = resize;        
-      }
-
-    </script>          
- -->
 
 
 
@@ -112,7 +47,7 @@
 
            <div class="vessel-graph">
              <div id="hlt_chart" ></div>
-
+ 
            </div>                    
 
          </div>
