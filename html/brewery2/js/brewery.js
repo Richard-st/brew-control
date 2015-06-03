@@ -215,6 +215,50 @@
       
     }
   }
+
+  ///////////////////////////////////////////////////
+  // Change visibility of vessels when sizes change
+  ///////////////////////////////////////////////////  
+  function resizeVessels(){  
+
+    if (matchMedia('screen and (max-width: 400px)').matches) {
+       document.getElementById("vessel-containers-HLT").style.display = "inline";  
+       document.getElementById("vessel-containers-mash").style.display = "none";  
+       document.getElementById("vessel-containers-boil").style.display = "none";     	
+    }  
+    else
+    {
+       document.getElementById("vessel-containers-HLT").style.display = "inline-block";  
+       document.getElementById("vessel-containers-mash").style.display = "inline-block";  
+       document.getElementById("vessel-containers-boil").style.display = "inline-block";       	
+    }
+		
+  }
+  
+  ///////////////////////////////////////////////////
+  // Hide and display mobile elements
+  ///////////////////////////////////////////////////
+  function mobileClick(iVessel){
+    
+    switch (iVessel) {
+      case 'HLT':
+         document.getElementById("vessel-containers-HLT").style.display = "inline";  
+         document.getElementById("vessel-containers-mash").style.display = "none";  
+         document.getElementById("vessel-containers-boil").style.display = "none";  
+         break;	
+      case 'MASH':
+         document.getElementById("vessel-containers-HLT").style.display = "none";  
+         document.getElementById("vessel-containers-mash").style.display = "inline";  
+         document.getElementById("vessel-containers-boil").style.display = "none";  
+         break;	
+      case 'BOIL':
+         document.getElementById("vessel-containers-HLT").style.display = "none";  
+         document.getElementById("vessel-containers-mash").style.display = "none";  
+         document.getElementById("vessel-containers-boil").style.display = "inline";  
+         break;	
+    }	
+  }     
+    
   
   ///////////////////////////////////////////////////
   // Utility functions

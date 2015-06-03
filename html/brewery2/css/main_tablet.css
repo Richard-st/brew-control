@@ -1,0 +1,38 @@
+#HLT {
+  color : blue;
+  float : left;
+  width : 40%;
+  }
+  
+#Mash {
+  color : blue;
+  float : left;
+  width : 40%;
+  }  
+  
+#boil {
+  color : blue;
+  float : left;
+  width : 40%;
+  }    
+  
+#page-body{
+  background : purple;
+  width : 100%; 
+  float: left;
+  /position:relative;  
+  minimum-height:400px;
+  height:80%;
+  padding:10px;
+  
+  min-width : 1024px;
+  max-width : 1024px;
+}
+  
+#page-body:after {
+}
+
+.vessel-container {
+  margin-right : 1%;
+  min-width:320px;  
+}

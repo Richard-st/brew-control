@@ -1,0 +1,58 @@
+#page-body{
+
+  height:auto;
+  padding: 0;
+  
+  background : purple;
+  width : 100%; 
+  float: left;
+  minimum-height:400px;
+  height:80%;
+  padding:10px;
+  
+  min-width : 360px;
+  max-width : 360px;
+}
+  
+
+
+.vessel-container {
+  color : yellow;
+  margin:0;
+  float : left;
+  width : 100%;
+  max-width:320px;
+  min-width:320px; 
+  }
+
+#vessel-containers-mash , #vessel-containers-HLT ,  #vessel-containers-boil{
+  display: none;  
+}
+
+#header{
+  padding-left:7;
+  width:100%;
+}
+
+#footer{
+  padding-left:7;
+  width:100%;
+}
+
+
+.menuBar { 
+  width: 100%; 
+  display: inline;
+}
+.menuBar ul { list-style: none; padding: 0px; margin: 0px; font-weight: bold; text-align: center; }
+.menuBar ul li { display: inline-block; }
+.menuBar ul li a { display: block; padding: 10px 20px; text-decoration: none; color: #444; }
+.menuBar ul li a:hover { background-color: #888; color: #fff; }
+
+@media (max-width:48.000em){
+	.example-header .container { width: 100%; }
+  	.menuBar ul { width: 100%; font-weight: normal; }
+  	.menuBar ul li { width: 33.3%; float: left; }
+  	.menuBar ul li:nth-of-type(odd) a { border-right: 1px solid #ccc; }
+  	.menuBar ul li a { padding: 8px 0px; border-bottom: 1px solid #ccc; display: block; }
+}

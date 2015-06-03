@@ -1,9 +1,10 @@
 <head>
-  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="image/nano.ico">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/main_tablet.css" media="screen and (max-width:900px)">
+  <link rel="stylesheet" href="css/main_tablet.css" media="screen and (max-width:1024px)">
   <!-- <link rel="stylesheet" href="css/main_phone_landscape.css" media="screen and (max-width:640px)">  -->    
-  <link rel="stylesheet" href="css/main_phone_portrait.css" media="screen and (max-width:360px)">  
+  <link rel="stylesheet" href="css/main_phone_portrait.css" media="screen and (max-width:400px)">  
 
   <link rel="stylesheet" href="css/on-off-switch.css">  
     
@@ -24,15 +25,28 @@
 
 </head>
 
-<body>
+<body onresize="resizeVessels()" >
   <div id="canvass">
     <div id="header">
       <h9 id="TIME" >Time</h9>
       Nano Brewery1
-    </div>
+
+    
+
+    </div>	
+    
+      <!-- Mobile Navigation  -->    
+      <nav class="menuBar">
+         <ul>
+           <li onclick="mobileClick('HLT')"><a href="#">HLT</a></li>
+           <li onclick="mobileClick('MASH')"><a href="#">MASH</a></li>
+           <li onclick="mobileClick('BOIL')"><a href="#">BOIL</a></li>
+         </ul>
+      </nav>
+          		    
     <div id="page-body">
       
-      <div class="vessel-container">
+      <div class="vessel-container" id="vessel-containers-HLT">
          <div class="vessel-title">
            HLT
          </div>
@@ -103,7 +117,7 @@
       
 
       
-      <div class="vessel-container">
+      <div class="vessel-container" id="vessel-containers-mash">
          <div class="vessel-title">
            MASH
          </div>
@@ -141,7 +155,7 @@
        </div>
       
       
-      <div class="vessel-container">
+      <div class="vessel-container" id="vessel-containers-boil">
          <div class="vessel-title">
            BOIL
          </div>
